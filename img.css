@@ -51,7 +51,8 @@
  *    csswizardry.com/2023/09/the-ultimate-lqip-lcp-technique
  * 6. All `img`s automatically participate in CSS Shapes by carrying a dormant
  *    `shape-margin`. Inert (i.e. `0`) if `--defaults-shape-margin` is not
- *    defined by consumer.
+ *    defined by consumer. This means it’s either set to something custom or
+ *    isn’t set at all—img.css doesn’t make any decisions.
    ========================================================================== */
 
 img {
