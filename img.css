@@ -39,7 +39,7 @@
  * It also includes some helpful nice-to-haves.
  *
  * 1. Remove pesky whitespace beneath `img` elements. Alternatives include
- *    `vertical-align: middle;`.
+ *    `display: block;`.
  * 2. Ensure `img`s remain fluid and never exceed their container’s width.
  *    Set in logical properties: corresponds to `max-width: 100%;` in
  *    horizontal–top-to-bottom writing modes.
@@ -56,7 +56,7 @@
    ========================================================================== */
 
 img {
-  display: block;                                /* [1] */
+  vertical-align: middle;                        /* [1] */
   max-inline-size: 100%;                         /* [2] */
   block-size: auto;                              /* [3] */
   font-style: italic;                            /* [4] */
