@@ -1,0 +1,65 @@
+/* ==========================================================================
+   #IMG.CSS
+   ========================================================================== */
+
+/**
+ * img.css is an opinionated `img`-only CSS reset and set of defaults.
+ *
+ * MIT License
+ *
+ * Copyright (c) 2025 Harry Roberts
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the ‘Software’), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *
+ */
+
+/**
+ * Handy, opinionated defaults for `img` elements.
+ *
+ * Ensuring `img` elements remain fluid while not causing layout shifts means
+ * a careful combination of HTML attributes and CSS properties. This snippet
+ * does that little dance for you.
+ *
+ * It also includes some helpful nice-to-haves.
+ *
+ * 1. Remove pesky whitespace beneath `img` elements. Alternatives include
+ *    `vertical-align: middle;`.
+ * 2. Ensure `img`s remain fluid and never exceed their container’s width.
+ *    Set in logical properties: corresponds to `max-width: 100%;` in
+ *    horizontal–top-to-bottom writing modes.
+ * 3. Ensure `img`’s height maintains proportional when `width` is set in HTML.
+ *    Set in logical properties: corresponds to `height: auto;` in
+ *    horizontal–top-to-bottom writing modes.
+ * 4. Offset `alt` text from surrounding text in the event of a failed image.
+ * 5. Helpful defaults for LQIP techniques that utilise `background-image`:
+ *    csswizardry.com/2023/09/the-ultimate-lqip-lcp-technique
+ * 6. All `img`s automatically participate in CSS Shapes by carrying a dormant
+ *    `shape-margin`. Inert (i.e. `0`) if `--defaults-shape-margin` is not
+ *    defined by consumer.
+   ========================================================================== */
+
+img {
+  display: block;                                /* [1] */
+  max-inline-size: 100%;                         /* [2] */
+  block-size: auto;                              /* [3] */
+  font-style: italic;                            /* [4] */
+  background-repeat: no-repeat;                  /* [5] */
+  background-size: cover;                        /* [5] */
+  shape-margin: var(--defaults-shape-margin, 0); /* [6] */
+}
