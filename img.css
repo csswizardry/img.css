@@ -43,7 +43,7 @@
  * 2. Ensure `img`s remain fluid and never exceed their container’s width.
  *    Set in logical properties: corresponds to `max-width: 100%;` in
  *    horizontal–top-to-bottom writing modes.
- * 3. Ensure `img`’s height maintains proportional when `width` is set in HTML.
+ * 3. Ensure `img`’s height remains proportional when `width` is set in HTML.
  *    Set in logical properties: corresponds to `height: auto;` in
  *    horizontal–top-to-bottom writing modes.
  * 4. Offset `alt` text from surrounding text in the event of a failed image.
